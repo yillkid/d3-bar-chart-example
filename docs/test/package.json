@@ -1,0 +1,14 @@
+{
+  "name": "d3e0f3933b2d6038",
+  "main": "d3e0f3933b2d6038@482.js",
+  "version": "482.0.0",
+  "homepage": "https://observablehq.com/d/d3e0f3933b2d6038",
+  "author": {
+    "name": "HuangJyunYu",
+    "url": "https://observablehq.com/@yillkid"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

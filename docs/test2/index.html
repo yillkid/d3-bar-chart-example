@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+  <body>
+
+    <div id="observablehq-chart-57b30781">1</div>
+    <div id="observablehq-viewof-order-57b30781" style = "visibility: hidden;"></div>
+    <div id="observablehq-alphabet-57b30781" style = "visibility: hidden;"></div>
+
+    <script type="module">
+      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+      import notebook from  "https://api.observablehq.com/d/d3e0f3933b2d6038.js?v=3";
+      const runtime = new Runtime();
+      const main = runtime.module(notebook, name => {
+        if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-57b30781"));
+        if (name === "viewof order") return new Inspector(document.querySelector("#observablehq-viewof-order-57b30781"));        
+        if (name === "alphabet") return new Inspector(document.querySelector("#observablehq-alphabet-57b30781"));
+        return ["udpdate","trigger"].includes(name);
+      });
+      
+      main.redefine("alphabet", fetch("input.json").then(response => response.json()));
+      
+    </script>
+
+  </body>
+</html>

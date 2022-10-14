@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Untitled</title>
+<link rel="stylesheet" type="text/css" href="./inspector.css">
+<body>
+<script type="module">
+
+import define from "./index.js";
+import {Runtime, Library, Inspector} from "./runtime.js";
+
+const runtime = new Runtime();
+
+const main = runtime.module(define, Inspector.into(document.body));
+
+/*
+const main = runtime.module(define, name => {
+  console.log("hello name = " + name)
+  switch(name){
+    case "viewof order": return Inspector.into(document.body)();
+    case "order": return Inspector.into(document.body)();
+    case "chart": return Inspector.into(document.body)();
+    case "udpdate": return Inspector.into(document.body)();
+    case "alphabet": return Inspector.into(document.body)();
+    case "BarChart": return Inspector.into(document.body)();
+    case "undefined": return Inspector.into(document.body)();
+    case "type": return Inspector.into(document.body)();
+    case "content": return Inspector.into(document.body)();
+  }
+});
+*/
+</script>
