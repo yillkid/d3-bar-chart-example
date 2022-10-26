@@ -1,14 +1,14 @@
 [
   {
      "letter":"A",
-     "frequency":0.18167
+     "frequency1":0.18167
   },
   {
      "letter":"B",
-     "frequency":0.03167
+     "frequency1":0.03167
   },
   {
      "letter":"C",
-     "frequency":0.98167
+     "frequency1":0.98167
   }
 ]

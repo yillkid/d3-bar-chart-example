@@ -7,13 +7,13 @@ const div = d3.selectAll("div");
 console.log("OK")
 alert("OK")
 
-alphabet = [{"letter": "A", "frequency": 0.08167}, {"letter": "B", "frequency": 0.00167}, {"letter": "C", "frequency": 0.18167}]
+alphabet = [{"letter": "A", "frequency1": 0.08167}, {"letter": "B", "frequency1": 0.00167}, {"letter": "C", "frequency1": 0.18167}]
 
 chart = BarChart(alphabet, {
   x: d => d.letter,
-  y: d => d.frequency,
+  y: d => d.frequency1,
   yFormat: "%",
-  yLabel: "↑ Frequency",
+  yLabel: "↑ frequency1",
   width,
   height: 500,
   color: "steelblue",
