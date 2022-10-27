@@ -9,3 +9,5 @@ and a demo-site will publish on [demo-site](https://yillkid.github.io/d3-bar-cha
   - fork from observablehq and implement customize JSON file
 - docs/api
   - bridge with sec-home API
+- docs/embedded
+  - embedded in a web page
