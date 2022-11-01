@@ -1,12 +1,12 @@
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import notebook from  "https://api.observablehq.com/d/d3e0f3933b2d6038.js?v=3";
+export function convert_project_weight_to_render_json(obj_project_weight) {
+  var obj_result = [];
 
-export function draw(input_for_render) {
-  const runtime = new Runtime();
-  const main = runtime.module(notebook, name => {
-    if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-b9eea16e"));
-    
-    return ["udpdate","trigger"].includes(name);
-  });
-  main.redefine("alphabet", input_for_render);
+  for (const key in obj_project_weight){
+    var obj_weight = {}
+    obj_weight.letter = `${key}`;
+    obj_weight.frequency = `${obj_project_weight[key]}`;
+    obj_result.push(obj_weight);
+  }
+
+  return obj_result;
 }
